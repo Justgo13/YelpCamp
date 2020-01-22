@@ -55,10 +55,10 @@ app.use(indexRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 
-app.get("/", function(req, res) {
-	res.render("landing");
+app.get("*", function(req, res) {
+	res.render("./landing");
 });
 
-app.listen(3000, function(req, res) {
+app.listen(process.env.PORT, process.env.IP, function(req, res) {
 	console.log("Yelp Camp server started");
 });
