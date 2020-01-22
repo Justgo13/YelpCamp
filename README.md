@@ -12,4 +12,4 @@ MongoDB database. The tools that were used to build this site are as follows:
 Usage: This website gives users the ability to register accounts which are then stored in a MongoDB database. The registered user can then 
 post campgrounds, and leave comments on their stay at the campgroud.
 
-The Heroku hosted application can be found here: https://yelpcampapplication-jason.herokuapp.com/campgrounds
+The Heroku hosted application can be found here: https://yelpcampapplication-jason.herokuapp.com
