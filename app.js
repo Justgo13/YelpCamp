@@ -17,7 +17,14 @@ var commentRoutes = require("./routes/comments"),
 
 // seedDB();
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb+srv://justgo13:gegedidi@yelpcamp-syuue.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://justgo13:gegedidi@yelpcamp-syuue.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser:true, useCreateIndex: true
+}).then(() => {
+	console.log("Connected to DB");
+}).catch(err => {
+	console.log("ERROR:", err.message);
+});
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + "/public"));
 app.use(flash());
