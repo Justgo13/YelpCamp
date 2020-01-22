@@ -17,7 +17,7 @@ var commentRoutes = require("./routes/comments"),
 
 // seedDB();
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/yelp_camp", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://justgo13:gegedidi@yelpcamp-syuue.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser:true});
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + "/public"));
 app.use(flash());
